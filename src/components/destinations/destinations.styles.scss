@@ -1,0 +1,104 @@
+
+#destinations{
+  
+  padding-top:20px;
+  padding-bottom: 0px;
+  
+}
+
+
+.des-title{
+  
+  text-align:center;
+  color: #055274;
+  font-family: 'Gloock', serif;
+
+
+  
+}
+
+
+
+.des-container {
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top:20px;
+  
+}
+
+.child-6 {
+  grid-row: 2 / 4;
+  grid-column: 2/3;
+}
+
+.child-3 {
+  grid-column: 3/4;
+  grid-row: 1 / 3;
+}
+
+.des-container-item {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    position: relative;
+  }
+
+  
+  .overlay{
+    position: absolute;
+    top:0;
+    left:150%;
+    width: 120%;
+    height:100%;
+    background-color: rgba(243, 242, 242, 0.7);
+    transform: skewX(-30deg);
+    transition: 1s;
+  }
+  
+  
+
+
+  h1 {
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    font-family: 'Gloock', serif;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+  }
+  p {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    color: rgb(233, 224, 224);
+    font-size: 20px;
+    text-align: end;
+    border-right: 2px solid rgb(216, 214, 214);
+    padding: 0px 10px 0px 0px;
+    line-height: 23px;
+    transform: translateX(150px);
+    transition: 0.5s;
+  }
+}
+
+.des-container-item:hover p {
+  transform: translateY(0);
+}
+
+.des-container-item:hover img {
+  transform: scale(1.1);
+}
+
+.des-container-item:hover .overlay{
+  left:-180%;
+}
