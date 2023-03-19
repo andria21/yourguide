@@ -1,7 +1,16 @@
+import React from "react";
 import "./card-item.styles.scss";
 import Carousel from "react-bootstrap/Carousel";
 
-export const CardItem = ({ collection }) => {
+export const CardItem = ({ image }) => {
+
+
+  // useEffect(() => {
+  //   data.fivestar.map(item => {
+  //     return setImage(item.imageUrl);
+  //   })
+  // }, []);
+  
   return (
     <div className="cards-wrapper row">
       <Carousel
@@ -15,7 +24,7 @@ export const CardItem = ({ collection }) => {
             <img
               className="card-img"
               alt=""
-              src={collection.imageUrl}
+              src={image}
             />
             <div className="overlay"></div>
             <div className="card-link-container">

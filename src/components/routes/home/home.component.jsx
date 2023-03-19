@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import "./home.styles.scss";
 import Navigation from "../../navigation/navigation.component";
 import CardDirectory from "../../cards-directory/cards-directory.component";
@@ -6,8 +6,21 @@ import { Destinations } from "../../destinations/destinations-component";
 import { AboutUs } from "../../about-us/about-us.component";
 import { ContactUs } from "../../contact-us/contact-us.component";
 import { Activities } from "../../activities/activities.component";
+import { CollectionContext } from "../../../context/collection/collection.context";
 
 export const Home = () => {
+
+  const { collectionMap } = useContext(CollectionContext);
+  
+  const [ object, setObject ] = useState({});
+
+  Object.keys(collectionMap).map((title) => {
+    const collection = collectionMap[title];
+    const data = collectionMap;
+    setObject(data);
+
+  })
+
   return (
     <div>
       <div className="header">
@@ -26,7 +39,7 @@ export const Home = () => {
       </div>
 
       <AboutUs />
-      <CardDirectory />
+      <CardDirectory data={object}/>
       <Activities/>
       <Destinations />
       
