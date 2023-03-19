@@ -1,69 +1,55 @@
-
-#destinations{
-  
-  padding-top:20px;
+#destinations {
+  padding-top: 20px;
   padding-bottom: 0px;
-  
 }
 
-
-.des-title{
-  
-  text-align:center;
+.des-title {
+  text-align: center;
   color: #055274;
-  font-family: 'Gloock', serif;
-
-
-  
+  font-family: "Gloock", serif;
 }
-
-
 
 .des-container {
   max-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  margin-top:20px;
-  
+  margin-top: 20px;
 }
 
-.child-6 {
-  grid-row: 2 / 4;
-  grid-column: 2/3;
+.Carousel {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-color: black;
+  overflow: hidden;
 }
 
-.child-3 {
-  grid-column: 3/4;
-  grid-row: 1 / 3;
+.slide {
+  padding: 0;
+  overflow: hidden;
 }
+
+
 
 .des-container-item {
   position: relative;
   overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-    position: relative;
-  }
+  
+  
 
   
-  .overlay{
+
+  .overlay {
     position: absolute;
-    top:0;
-    left:150%;
+    top: 0;
+    left: 150%;
     width: 120%;
-    height:100%;
-    background-color: rgba(243, 242, 242, 0.7);
+    height: 100%;
     transform: skewX(-30deg);
     transition: 1s;
   }
-  
-  
-
 
   h1 {
     text-align: center;
@@ -71,34 +57,45 @@
     top: 40px;
     left: 0;
     right: 0;
-    font-family: 'Gloock', serif;
+    font-family: "Gloock", serif;
     color: white;
     font-weight: 500;
     font-size: 30px;
   }
   p {
     position: absolute;
-    right: 10px;
-    bottom: 0px;
-    color: rgb(233, 224, 224);
+    top:100px;
+    bottom:0;
+    color:transparent;
     font-size: 20px;
-    text-align: end;
     border-right: 2px solid rgb(216, 214, 214);
-    padding: 0px 10px 0px 0px;
+    padding:0 10px;
     line-height: 23px;
-    transform: translateX(150px);
-    transition: 0.5s;
+    transform: translateX(-470px);
+    transition: 1s;
+    text-align: center;
+  }
+
+  img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    position: relative;
   }
 }
 
 .des-container-item:hover p {
   transform: translateY(0);
+  color: rgb(252, 250, 250);
+  
 }
 
 .des-container-item:hover img {
   transform: scale(1.1);
 }
 
-.des-container-item:hover .overlay{
-  left:-180%;
+.des-container-item:hover .overlay {
+  left: -180%;
+  background-color: rgba(243, 242, 242, 0.7);
 }

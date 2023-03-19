@@ -4,7 +4,8 @@ import Carousel from "react-bootstrap/Carousel";
 export const CardItem = () => {
   return (
     <div className="cards-wrapper row">
-      <Carousel 
+      <Carousel
+        className="tour-carousel"
         indicators={false}
         prevIcon={<i className="fa-solid fa-angle-left"></i>}
         nextIcon={<i className="fa-solid fa-angle-right"></i>}
