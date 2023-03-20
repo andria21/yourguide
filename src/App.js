@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useEffect} from 'react';
+>>>>>>> 5a2e7914dc77f576d1507b077035104f240e1285
 import './App.css';
 import {Routes , Route } from 'react-router-dom'
 import { Home } from './components/routes/home/home.component';
